@@ -1,0 +1,53 @@
+.car_types {
+    width: 60%;
+}
+
+.card {
+    color: $very_light_gray;
+    padding: 3.33rem 2rem;
+
+    h3 {
+        font-size: 2rem;
+        text-transform: uppercase;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-weight: 400;
+        margin-bottom: 1.67rem;
+    }
+
+    &_item_1 {
+        border-radius: 8px 8px 0 0;
+        background-color: $bright_orange;
+    }
+
+    &_item_2 {
+        background-color: $dark_cyan;
+    }
+
+    &_item_3 {
+        background-color: $very_dark_cyan;
+        border-radius: 0 0 8px 8px;
+    }
+}
+
+@media (min-width: 970px) {
+    .car_types {
+        width: 60%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card {
+
+        &_item_1 {
+            border-radius: 8px 0 0 8px;
+        }
+
+        &_item_3 {
+            border-radius: 0 8px 8px 0;
+        }
+    }
+}
